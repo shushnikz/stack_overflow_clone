@@ -60,7 +60,8 @@ function Question() {
                 <small>Be specific and imaging you're asking
                     a question to another person
                 </small>
-                <input value={title}
+                <input 
+                value={title}
                 onChange={(e)=> setTitle(e.target.value)}
                  type="text" placeholder="Add question title" />
             </div>
@@ -71,7 +72,9 @@ function Question() {
                 <small>Be specific and imaging you're asking
                     a question to another person
                 </small>
-                <ReactQuill value={body} onChange={handleQuill} className='react-quill' theme="snow" />
+                <ReactQuill
+                 value={body} onChange={handleQuill} 
+                 className='react-quill' theme="snow" />
             </div>
         </div>
         <div className='question-option'>
@@ -91,8 +94,11 @@ function Question() {
         </div>
         <button
         disabled={loading}
-         type="submit" onClick={handleSubmit} className='button'>
-            {loading ? "Adding question..." : "Add your question"}</button>
+         type="submit" 
+         onClick={handleSubmit} 
+         className='button'>
+            {loading ? "Adding question..." : "Add your question"}
+            </button>
         </div>
     </div>
   )

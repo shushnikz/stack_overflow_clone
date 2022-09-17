@@ -98,9 +98,9 @@ function MainQuestion() {
         <div className='main-top'>
        <h2 className='main-question'>{questionData?.title}</h2>
        <Link to="/add-question">
-        <button>
-            Ask Question
-        </button>
+        
+           <p>Ask Question</p> 
+        
        </Link>
 </div>
 <div className='main-desc'>

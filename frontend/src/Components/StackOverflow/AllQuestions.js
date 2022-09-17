@@ -7,11 +7,11 @@ import ReactHtmlParser from "react-html-parser";
 function AllQuestions({question}) {
 
   //  console.log(question?.tags[0]);
-  let tags = JSON.parse(question?.tags[0])
+  // let tags = JSON.parse(question?.tags[0])
   function truncate(str, n){
     return str?.length > n ? str.substr(0, n -1) + "..." : str
   }
-  // const tags = [];
+  const tags = [];
 
   return (
     <div className="all-questions">
@@ -59,8 +59,8 @@ function AllQuestions({question}) {
                 <small>{new Date(question?.created_at).toLocaleString}</small>
                 <div className="author-details">
                     <Avatar src={question?.user?.photo}/>
-                    <p>{question?.user.displayName ? question?.user.displayName : (question?.user?.email)
-                    .split("@")[0]}</p>
+                    {/* <p>{question?.user.displayName ? question?.user.displayName : (question?.user?.email)
+                    .split("@")[0]}</p> */}
                 </div>
             </div>
             </div>

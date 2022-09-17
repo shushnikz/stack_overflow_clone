@@ -56,11 +56,12 @@ function App() {
       <Router>
       <Header />
       <Switch>
-      {/* <Route exact path="/auth" />{!user? <Redirect to = "/auth" /> : <StackOverflow />}  */}
-            {/* <Route exact path="/auth" component={Auth} /> */}
-             <Route exact path="/" component = {StackOverflow} /> 
-            <Route exact path="/add-question" component = {Question} />
-            <Route exact path="/question" component = {ViewQuestion} />
+           <Route exact path={user ? "/" : "/auth"}
+           component = {user ? StackOverflow : Auth} />
+            
+            
+            <PrivateRoute exact path="/add-question" component = {Question} />
+            <PrivateRoute exact path="/question" component = {ViewQuestion}  />
             
             </Switch>
       </Router>
